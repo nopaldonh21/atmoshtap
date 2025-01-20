@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Sofia_Sans, Source_Sans_3 } from 'next/font/google';
 import './globals.css';
+import Navbar from '../components/Navbar';
 
 const sofiaSans = Sofia_Sans({
   variable: '--font-sofia-sans',
@@ -33,7 +34,8 @@ export default function RootLayout({
           'bg-[radial-gradient(50%_50%_at_50.64%_50%,#ACE4FE_0%,#1EA8FA_100%)] min-h-screen',
         ].join(' ')}
       >
-        {children}
+        <Navbar />
+        <main className="lg:px-24 lg:py-14 p-6">{children}</main>
       </body>
     </html>
   );
