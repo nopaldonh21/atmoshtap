@@ -4,9 +4,9 @@ import SearchSuggestions from '@/components/SearchSuggestions';
 export default async function Home({
   searchParams,
 }: {
-  searchParams: {
+  searchParams: Promise<{
     search: string;
-  };
+  }>;
 }) {
   const { search = '' } = await searchParams;
 
